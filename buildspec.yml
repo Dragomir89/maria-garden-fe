@@ -5,11 +5,15 @@ phases:
     runtime-versions:
       nodejs: 22.x
     commands:
-      - echo Installing dependencies...
+      - echo Installing dependencies... ... .... ....
       - npm ci --legacy-peer-deps
+  pre_build:
+    commands:
+      - echo Running tests... ... .... ....
+      - npm run test
   build:
     commands:
-      - echo Building the application...
+      - echo Building the application... .... .... ....
       - npm run build
 artifacts:
   files:
