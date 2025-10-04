@@ -1,11 +1,18 @@
 import React from 'react';
+import { MODE } from '../config';
 
 interface TitleProps {
   title: string;
 }
 
 const Title: React.FC<TitleProps> = ({ title }) => {
-  return <h1 className="text-3xl font-bold underline">{title}</h1>;
+  console.log(MODE);
+  return (
+    <>
+      <h1>{title}</h1>
+      <h2>{MODE}</h2>
+    </>
+  );
 };
 
 export default Title;

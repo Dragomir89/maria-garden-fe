@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       nodejs: 22.x
     commands:
+      - echo "[$(date)] the time now !!!!!!!!!!!"
       - echo Installing dependencies... ... .... ....
       - npm ci --legacy-peer-deps
   pre_build:
