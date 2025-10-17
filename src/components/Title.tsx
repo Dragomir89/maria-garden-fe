@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MODE } from '../config';
+import { getUsers } from '../requests';
 
 interface TitleProps {
   title: string;
@@ -7,6 +8,14 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ title }) => {
   console.log(MODE);
+  useEffect(() => {
+    const users = async () => {
+      const response = await getUsers();
+
+      console.log(response);
+    };
+    users();
+  }, []);
   return (
     <>
       <h1>{title}</h1>
