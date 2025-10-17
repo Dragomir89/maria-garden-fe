@@ -16,6 +16,9 @@ phases:
     commands:
       - echo Building the application... .... .... ....
       - npm run build
+  post_build:
+    commands:
+      - echo "BUILD COMPLETED on ..... $(date) ......"
 artifacts:
   files:
     - '**/*'
